@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📈 Tabla de Progresión 💪</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #eef2f7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 20px;
+            color: #222;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .titulo-imagen {
+            width: 250px; /* Ajusta el tamaño de la imagen */
+            height: auto;
+            margin-bottom: 20px;
+            position: relative;
+            top: 100px; /* Ajusta este valor para moverla hacia abajo */
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1d3557;
+            margin-bottom: -10px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #444;
+            max-width: 500px;
+        }
+
+        /* Contenedor de la tabla */
+        .tabla-container {
+            width: 100%;
+            max-width: 380px;
+            overflow-x: auto;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            background-color: #ffffff;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .tabla-container:hover {
+            transform: scale(1.02);
+        }
+
+        /* Estilo de la tabla */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            font-size: 0.9rem;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th {
+            background-color: #1E3A5F;
+            color: white;
+            padding: 10px;
+            font-size: 1rem;
+            text-align: left;
+            border-bottom: 2px solid #ddd;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 8px;
+            border: 1px solid #ddd;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #333;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        td:hover {
+            background-color: #f1f1f1;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Botones de acción */
+        .btn-container {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        button {
+            background-color: #1E3A5F;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #14273D;
+            transform: translateY(-3px);
+        }
+
+        button:active {
+            transform: translateY(1px);
+        }
+
+        .delete-row {
+            background-color: #E74C3C;
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .delete-row:hover {
+            background-color: #C0392B;
+        }
+
+        /* Estilo de título de cada tabla */
+        .tabla-container h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+            text-transform: capitalize;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        /* Botón de guardar */
+        .guardar-btn {
+            background-color: #28a745;
+            color: white;
+            border-radius: 8px;
+            padding: 10px 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 20px;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .guardar-btn:hover {
+            background-color: #218838;
+            transform: translateY(-3px);
+        }
+
+        .guardar-btn:active {
+            transform: translateY(1px);
+        }
+
+        /* Estilos responsivos para móviles */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+                padding: 0 15px;
+            }
+
+            .tabla-container {
+                padding: 10px;
+                max-width: 350px;
+            }
+
+            table {
+                font-size: 0.85rem;
+            }
+
+            button {
+                font-size: 0.9rem;
+                padding: 8px 12px;
+            }
+
+            .guardar-btn {
+                font-size: 0.9rem;
+                padding: 8px 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Aquí puedes agregar el resto del contenido como la tabla y botones -->
+
+</body>
+</html>
+
+</head>
+
+<body>
+    <img src="imagen.png" alt="Progresión" class="titulo-imagen">
+    <h1>📈 Tabla de Progresión 💪</h1>
+    <p>Registra y analiza tu progresión en cada sesión de entrenamiento. Ajusta los parámetros de tu rutina en función de la fatiga acumulada y los principios de periodización para lograr adaptaciones óptimas. 💪🔬</p>
+
+    <div id="tablas-container"></div>
+
+    <button class="guardar-btn" onclick="guardarDatos()">Guardar</button>
+
+    <script>
+        const diasSemana = [
+            { dia: "Lunes", entrenamiento: "Pecho, Tríceps y Hombros" },
+            { dia: "Martes", entrenamiento: "Bíceps y Espalda" },
+            { dia: "Miércoles", entrenamiento: "Pierna (Cuádriceps)" },
+            { dia: "Jueves", entrenamiento: "Pecho, Tríceps y Hombros" },
+            { dia: "Viernes", entrenamiento: "Bíceps y Espalda" },
+            { dia: "Sábado", entrenamiento: "Pierna (Isquiotibiales)" },
+            { dia: "Domingo", entrenamiento: "Descanso" }
+        ];
+
+        function crearTabla(dia, entrenamiento) {
+            const tablaContainer = document.createElement("div");
+            tablaContainer.classList.add("tabla-container");
+
+            const titulo = document.createElement("h2");
+            titulo.contentEditable = true;
+            titulo.innerText = `${dia}: ${entrenamiento}`;
+
+            const tabla = document.createElement("table");
+            tabla.innerHTML = `
+                <thead>
+                    <tr>
+                        <th>Ejercicio</th>
+                        <th>Series</th>
+                        <th>Repeticiones</th>
+                        <th>Peso(kg)</th>
+                        <th>RM</th>
+                        <th>RIR</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            `;
+
+            const btnAgregarFila = document.createElement("button");
+            btnAgregarFila.innerText = "Añadir Fila";
+            btnAgregarFila.onclick = () => agregarFila(tabla);
+
+            tablaContainer.appendChild(titulo);
+            tablaContainer.appendChild(tabla);
+            tablaContainer.appendChild(btnAgregarFila);
+            document.getElementById("tablas-container").appendChild(tablaContainer);
+        }
+
+        function agregarFila(tabla) {
+            const fila = document.createElement("tr");
+            for (let i = 0; i < 6; i++) {
+                const celda = document.createElement("td");
+                celda.contentEditable = true;
+                fila.appendChild(celda);
+            }
+
+            const celdaEliminar = document.createElement("td");
+            const btnEliminar = document.createElement("button");
+            btnEliminar.innerText = "X";
+            btnEliminar.classList.add("delete-row");
+            btnEliminar.onclick = () => fila.remove();
+            celdaEliminar.appendChild(btnEliminar);
+            fila.appendChild(celdaEliminar);
+
+            tabla.querySelector("tbody").appendChild(fila);
+        }
+
+        function guardarDatos() {
+            const tablas = document.querySelectorAll(".tabla-container");
+            let datos = [];
+
+            tablas.forEach(tablaContainer => {
+                let titulo = tablaContainer.querySelector("h2").innerText;
+                let filas = [];
+
+                const filasHTML = tablaContainer.querySelectorAll("tbody tr");
+                filasHTML.forEach(fila => {
+                    let celdas = fila.querySelectorAll("td");
+                    let filaDatos = [];
+
+                    for (let i = 0; i < 6; i++) {
+                        filaDatos.push(celdas[i].innerText);
+                    }
+
+                    filas.push(filaDatos);
+                });
+
+                datos.push({ titulo, filas });
+            });
+
+            localStorage.setItem("tablasEntrenamiento", JSON.stringify(datos));
+            alert("Datos guardados correctamente");
+        }
+
+        function cargarDatos() {
+            const datos = JSON.parse(localStorage.getItem("tablasEntrenamiento"));
+            if (!datos) {
+                diasSemana.forEach(({ dia, entrenamiento }) => crearTabla(dia, entrenamiento));
+                return;
+            }
+
+            datos.forEach(tabla => {
+                const [dia, entrenamiento] = tabla.titulo.split(": ");
+                crearTabla(dia, entrenamiento);
+
+                const tablaElement = document.querySelector("h2").innerText === tabla.titulo ? 
+                    document.querySelector("table") : null;
+
+                if (tablaElement) {
+                    tabla.filas.forEach(filaDatos => {
+                        const fila = document.createElement("tr");
+
+                        filaDatos.forEach(dato => {
+                            const celda = document.createElement("td");
+                            celda.contentEditable = true;
+                            celda.innerText = dato;
+                            fila.appendChild(celda);
+                        });
+
+                        const celdaEliminar = document.createElement("td");
+                        const btnEliminar = document.createElement("button");
+                        btnEliminar.innerText = "X";
+                        btnEliminar.classList.add("delete-row");
+                        btnEliminar.onclick = () => fila.remove();
+                        celdaEliminar.appendChild(btnEliminar);
+                        fila.appendChild(celdaEliminar);
+
+                        tablaElement.querySelector("tbody").appendChild(fila);
+                    });
+                }
+            });
+        }
+
+        // Cargar datos al inicio
+        cargarDatos();
+    </script>
+</body>
+
+</html>
